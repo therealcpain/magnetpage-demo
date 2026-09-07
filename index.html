@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MagnetPage Kit — Own your bio link. Capture emails. No monthly tax.</title>
+  <meta name="description" content="Static link-in-bio + lead magnet templates for creators. $9 one-time. Own the page. Grow the list. No Linktree fees.">
+  <!-- No external CSS, fonts, CDNs, or trackers. System fonts only. -->
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --fg: #1c1917;
+      --muted: #78716c;
+      --card: #ffffff;
+      --accent: #0f766e;
+      --accent-fg: #ffffff;
+      --accent-soft: #ccfbf1;
+      --border: #e7e5e4;
+      --warn-bg: #fef3c7;
+      --warn-fg: #92400e;
+      --radius: 12px;
+      --max: 720px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+    .banner {
+      background: var(--warn-bg);
+      color: var(--warn-fg);
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid #fde68a;
+    }
+    header.hero {
+      text-align: center;
+      padding: 3rem 0 2.5rem;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.35rem);
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 auto 1.75rem;
+      max-width: 34rem;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.85rem 1.35rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--accent-fg);
+    }
+    .btn-primary:hover { filter: brightness(1.06); }
+    .btn-secondary {
+      background: var(--card);
+      color: var(--fg);
+      border-color: var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--accent); }
+    .cta-note {
+      width: 100%;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--warn-fg);
+      background: var(--warn-bg);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      margin-top: 0.85rem;
+      max-width: 28rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .price-pill {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--fg);
+    }
+    .price-pill span { color: var(--accent); font-size: 1.35rem; }
+    section {
+      padding: 2.25rem 0;
+      border-top: 1px solid var(--border);
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin: 0 0 1rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin: 0 0 0.35rem;
+      font-weight: 700;
+    }
+    .muted { color: var(--muted); }
+    .grid {
+      display: grid;
+      gap: 0.85rem;
+    }
+    @media (min-width: 560px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+      .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.15rem 1.25rem;
+    }
+    .card p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+    ul.check {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.check li {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.75rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+    ul.check li:last-child { border-bottom: none; }
+    ul.check li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 800;
+    }
+    .price-box {
+      background: var(--card);
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+    }
+    .price-box .amount {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin: 0.35rem 0;
+      color: var(--accent);
+    }
+    .price-box .amount small {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .faq details {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.85rem 1.1rem;
+      margin-bottom: 0.65rem;
+    }
+    .faq summary {
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .faq details p {
+      margin: 0.65rem 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .split {
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 560px) {
+      .split { grid-template-columns: 1fr 1fr; }
+    }
+    .for-not .card.no { border-style: dashed; opacity: 0.92; }
+    footer.site {
+      text-align: center;
+      padding: 2.5rem 1.25rem 3rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    footer.site .cta-row { margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <span class="badge">One-time download · $9</span>
+      <h1>Own your bio link.<br>Capture emails.<br>No monthly tax.</h1>
+      <p class="lead">
+        MagnetPage Kit is a static link-in-bio + lead-magnet template pack for solo creators.
+        Edit HTML once, host free, point Instagram / TikTok / X / YouTube at a page you own.
+      </p>
+      <div class="cta-row">
+        <!-- REPLACE: set href to live Gumroad product URL -->
+        <a class="btn btn-primary" href="https://brewchristian.gumroad.com/l/pcyldc" data-cta="gumroad">Buy on Gumroad — $9</a>
+        <!-- REPLACE: mailto:steward@brewcityblockchain.com → real support address -->
+        <a class="btn btn-secondary" href="mailto:steward@brewcityblockchain.com">Questions? Email</a>
+      </div>
+      <p class="price-pill"><span>$9</span> one-time · personal use · you keep the files</p>
+    </header>
+
+    <section id="problem" aria-labelledby="problem-title">
+      <h2 id="problem-title">The problem</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Rented bio pages</h3>
+          <p>Linktree / Beacons charge monthly or gate features. Leave the plan, lose the setup.</p>
+        </div>
+        <div class="card">
+          <h3>Weak lead path</h3>
+          <p>Most bio tools are link dumps. Your free PDF / checklist never starts an email list.</p>
+        </div>
+        <div class="card">
+          <h3>Builder fatigue</h3>
+          <p>Heavy no-code stacks for a one-page bio. You wanted shipping, not another subscription.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-you-get" aria-labelledby="get-title">
+      <h2 id="get-title">What you get</h2>
+      <ul class="check">
+        <li><strong>5 ready-to-edit layouts</strong> — minimal, bold, product-first, newsletter, services</li>
+        <li><strong>Lead-magnet block</strong> — headline, opt-in CTA, thank-you / delivery pattern</li>
+        <li><strong>Email-tool hooks</strong> — Beehiiv, Buttondown, Mailchimp, ConvertKit-style form notes</li>
+        <li><strong>Free hosting paths</strong> — GitHub Pages, Netlify Drop, or local preview</li>
+        <li><strong>First-48-hours checklist</strong> — bio copy, magnet offer, basic UTM notes</li>
+        <li><strong>Sample lead magnet</strong> — starter checklist you can adapt or export to PDF</li>
+        <li><strong>Personal-use license</strong> — edit freely for your own brand; no monthly fee</li>
+      </ul>
+      <p class="muted" style="margin-top:1rem;font-size:0.9rem;">
+        No external fonts, CDNs, analytics, or paid APIs in the templates. All CSS is inline. Works offline.
+      </p>
+    </section>
+
+    <section id="for" aria-labelledby="for-title">
+      <h2 id="for-title">Who it’s for / not for</h2>
+      <div class="split for-not">
+        <div class="card">
+          <h3>For you if…</h3>
+          <p>You’re a solo creator (~1k–50k) with a freebie (PDF, Notion, checklist) and you want emails without another SaaS bill.</p>
+        </div>
+        <div class="card no">
+          <h3>Not for you if…</h3>
+          <p>You need a full storefront, payments dashboard, or Stan Store / Linktree analytics replacement. This is a static page pack you own.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="price" aria-labelledby="price-title">
+      <h2 id="price-title">Price</h2>
+      <div class="price-box">
+        <p class="muted" style="margin:0;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;font-size:0.75rem;">MagnetPage Kit</p>
+        <p class="amount">$9 <small>USD · one-time</small></p>
+        <p class="muted" style="margin:0 0 1.25rem;">Instant download after purchase · No subscription</p>
+        <!-- REPLACE: set href to live Gumroad product URL -->
+        <a class="btn btn-primary" href="https://brewchristian.gumroad.com/l/pcyldc" data-cta="gumroad">Buy on Gumroad — $9</a>
+        <p class="muted" style="margin:1rem 0 0;font-size:0.85rem;">
+          Simple fairness: if the kit is not useful, ask for a refund while we’re still validating the offer.
+        </p>
+      </div>
+    </section>
+
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ</h2>
+      <details>
+        <summary>Do I need to buy hosting?</summary>
+        <p>No. Use free GitHub Pages or Netlify Drop, or open the HTML locally while you edit. Custom domains are optional later and not required to sell or use the kit.</p>
+      </details>
+      <details>
+        <summary>How technical is this?</summary>
+        <p>If you can edit text in a file and drag a folder onto Netlify Drop, you’re fine. Templates are plain HTML + CSS. No build step, no Node, no paid CDN.</p>
+      </details>
+      <details>
+        <summary>Will the email form collect leads out of the box?</summary>
+        <p>Not until you wire it. Each template ships with a clearly marked placeholder. Connect Beehiiv / Buttondown / Mailchimp / ConvertKit or a form endpoint using the included snippets guide.</p>
+      </details>
+      <details>
+        <summary>Can I use a custom domain later?</summary>
+        <p>Yes. Point a domain at GitHub Pages or Netlify when you’re ready. The kit does not sell or register domains.</p>
+      </details>
+      <details>
+        <summary>Is this a Linktree / Stan Store replacement?</summary>
+        <p>It’s an ownable static alternative for links + lead capture. It is not a marketplace, payment processor, or analytics suite.</p>
+      </details>
+      <details>
+        <summary>Commercial / client use?</summary>
+        <p>License is personal use for your own bio. If you need client / agency rights, email and ask — don’t assume.</p>
+      </details>
+    </section>
+  </div>
+
+  <footer class="site">
+    <div class="wrap">
+      <p style="font-weight:700;color:var(--fg);margin:0 0 0.35rem;">Checkout is live — instant download.</p>
+      <p class="muted" style="margin:0;">Own the page. Grow the list.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://brewchristian.gumroad.com/l/pcyldc" data-cta="gumroad">Buy on Gumroad — $9</a>
+        <a class="btn btn-secondary" href="mailto:steward@brewcityblockchain.com">mailto:steward@brewcityblockchain.com — REPLACE</a>
+      </div>
+      <p class="muted" style="margin:0.85rem auto 0;max-width:28rem;font-size:0.8rem;">Instant download via Gumroad · $9 one-time. No paid services used to build this page.</p>
+      <p style="margin-top:1.5rem;">MagnetPage Kit · Static templates · $9 one-time</p>
+    </div>
+  </footer>
+</body>
+</html>
