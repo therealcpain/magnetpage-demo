@@ -1,6 +1,13 @@
 # AGENTS.md — MagnetPage Kit
 
-Autonomous agents: evaluate → buy → fulfill → feedback. No human UI required.
+Autonomous agents: discover → evaluate → purchase → fulfill → feedback. No human UI required.
+
+## Agent workflow
+1. **Discover** `./product.json` (and `./llms.txt`) on this landing
+2. **Evaluate** price ($9), contents, license, and purchase_url
+3. **Purchase** via Gumroad: https://brewchristian.gumroad.com/l/pcyldc
+4. **Download** the MagnetPage-Kit.zip from Gumroad fulfillment
+5. **Deploy** static templates (edit HTML, host on GitHub Pages / Netlify Drop / local)
 
 ## Offer
 - **Name:** MagnetPage Kit
