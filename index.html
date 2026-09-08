@@ -5,7 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MagnetPage Kit — Own your bio link. Capture emails. No monthly tax.</title>
   <meta name="description" content="Static link-in-bio + lead magnet templates for creators. $9 one-time. Own the page. Grow the list. No Linktree fees.">
-  <!-- No external CSS, fonts, CDNs, or trackers. System fonts only. -->
+  <!--
+    GoatCounter (privacy-friendly). Site code may be remapped when the account exists.
+    MagnetPage site code: magnetpage → https://magnetpage.goatcounter.com/count
+    SoftDue: softdue · Writerstack: writerstack
+    Env override: set data-goatcounter via deploy env / meta if codes differ.
+  -->
+  <!-- goatcounter-site: magnetpage -->
+  <script data-goatcounter="https://magnetpage.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  <!-- No Google Analytics / invasive trackers. System fonts only. -->
   <style>
     :root {
       --bg: #fafaf9;
@@ -233,7 +242,7 @@
       </p>
       <div class="cta-row">
         <!-- Live Gumroad product URL -->
-        <a class="btn btn-primary" href="https://brewchristian.gumroad.com/l/pcyldc" data-cta="gumroad">Buy on Gumroad — $9</a>
+        <a class="btn btn-primary" href="https://brewchristian.gumroad.com/l/pcyldc" data-cta="gumroad" onclick="window.goatcounter && goatcounter.count({path: '/cta/buy', title: 'Buy MagnetPage', event: true})">Buy on Gumroad — $9</a>
         <!-- Support: steward@brewcityblockchain.com -->
         <a class="btn btn-secondary" href="mailto:steward@brewcityblockchain.com">Questions? Email</a>
       </div>
@@ -295,7 +304,7 @@
         <p class="amount">$9 <small>USD · one-time</small></p>
         <p class="muted" style="margin:0 0 1.25rem;">Instant download after purchase · No subscription</p>
         <!-- Live Gumroad product URL -->
-        <a class="btn btn-primary" href="https://brewchristian.gumroad.com/l/pcyldc" data-cta="gumroad">Buy on Gumroad — $9</a>
+        <a class="btn btn-primary" href="https://brewchristian.gumroad.com/l/pcyldc" data-cta="gumroad" onclick="window.goatcounter && goatcounter.count({path: '/cta/buy', title: 'Buy MagnetPage', event: true})">Buy on Gumroad — $9</a>
         <p class="muted" style="margin:1rem 0 0;font-size:0.85rem;">
           Simple fairness: if the kit is not useful, ask for a refund while we’re still validating the offer.
         </p>
@@ -336,7 +345,7 @@
       <p style="font-weight:700;color:var(--fg);margin:0 0 0.35rem;">Checkout is live — instant download.</p>
       <p class="muted" style="margin:0;">Own the page. Grow the list.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://brewchristian.gumroad.com/l/pcyldc" data-cta="gumroad">Buy on Gumroad — $9</a>
+        <a class="btn btn-primary" href="https://brewchristian.gumroad.com/l/pcyldc" data-cta="gumroad" onclick="window.goatcounter && goatcounter.count({path: '/cta/buy', title: 'Buy MagnetPage', event: true})">Buy on Gumroad — $9</a>
         <a class="btn btn-secondary" href="mailto:steward@brewcityblockchain.com">Email steward@brewcityblockchain.com</a>
       </div>
       <p class="muted" style="margin:0.85rem auto 0;max-width:28rem;font-size:0.8rem;">Instant download via Gumroad · $9 one-time. No paid services used to build this page.</p>
