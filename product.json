@@ -1,0 +1,36 @@
+{
+  "name": "MagnetPage Kit",
+  "product_id": "magnetpage",
+  "price_usd": 9,
+  "currency": "USD",
+  "purchase_url": "https://brewchristian.gumroad.com/l/pcyldc",
+  "landing_url": "https://therealcpain.github.io/magnetpage-demo/",
+  "license": "Personal use for your own bio / brand. Client/agency rights by request.",
+  "contents": [
+    "5 static link-in-bio HTML layouts",
+    "Lead-magnet block + email-tool hook notes",
+    "Free hosting paths (GitHub Pages / Netlify Drop)",
+    "First-48-hours checklist + sample lead magnet",
+    "Personal-use license"
+  ],
+  "summary": "Static link-in-bio + lead-magnet templates for creators. $9 one-time. Own the page.",
+  "feedback": {
+    "human_ui": "Feedback FAB on landing (FormSubmit)",
+    "endpoint": "https://formsubmit.co/steward@brewcityblockchain.com",
+    "method": "POST",
+    "fields": {
+      "product": "MagnetPage Kit",
+      "page_url": "https://therealcpain.github.io/magnetpage-demo/",
+      "_subject": "[MagnetPage Kit] landing feedback",
+      "_captcha": "false",
+      "_template": "table",
+      "message": "(required freeform)",
+      "email": "(optional)",
+      "tags": "(optional chips)"
+    }
+  },
+  "agentic": {
+    "llms_txt": "./llms.txt",
+    "agents_md": "./AGENTS.md"
+  }
+}

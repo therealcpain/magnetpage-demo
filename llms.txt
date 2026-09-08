@@ -1,0 +1,26 @@
+# MagnetPage Kit
+
+> Static link-in-bio + lead-magnet templates for creators. $9 one-time. Own the page.
+
+Price: $9 USD one-time
+Purchase: https://brewchristian.gumroad.com/l/pcyldc
+Landing: https://therealcpain.github.io/magnetpage-demo/
+Structured offer: ./product.json
+Agent guide: ./AGENTS.md
+Feedback (POST FormSubmit): https://formsubmit.co/steward@brewcityblockchain.com
+  - product=MagnetPage Kit
+  - page_url=<this page>
+  - message=<required freeform>
+  - _subject=[MagnetPage Kit] landing feedback
+  - _captcha=false
+  - _template=table
+
+## Contents
+- 5 static link-in-bio HTML layouts
+- Lead-magnet block + email-tool hook notes
+- Free hosting paths (GitHub Pages / Netlify Drop)
+- First-48-hours checklist + sample lead magnet
+- Personal-use license
+
+## License
+Personal use for your own bio / brand. Client/agency rights by request.
